@@ -1,0 +1,18 @@
+<div class="container">
+  <form [formGroup]="formGroup" class="form">
+    <mat-form-field class="mat-form-field" [appearance]="'outline'" *ngFor="let term of ['firstTerm', 'secondTerm']; index as index">
+      <mat-label>{{index == 0 ? 'First Term' : 'Second Term'}}</mat-label>
+      <input type="text" matInput [formControlName]="term" [errorStateMatcher]="matcher" placeholder="Ex: -2.3">
+      <mat-error *ngIf="formGroup.get(term).hasError('required')">Required field</mat-error>
+      <mat-error *ngIf="formGroup.get(term).hasError('isNotNumber')">Incorrect number format</mat-error>
+    </mat-form-field>
+  </form>
+
+  <div class="operations">
+    <button *ngFor="let operation of operations" mat-raised-button class="operation"
+            [disabled]="operation.name === OperationType.DIVISION ? !formGroup.valid || divisionProhibited : !formGroup.valid"
+            (click)="compute(operation.name)">
+      {{operation.symbol}}
+    </button>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.operations {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.mat-form-field {
+  padding-bottom: 10px;
+}
+
+.operation {
+  background-color: ghostwhite;
+}

@@ -1,0 +1,21 @@
+.flex-container {
+  display: inline-flex;
+  flex-direction: column;
+  background-color: lemonchiffon;
+  border-radius: 10px;
+  border: gray 1px solid;
+  align-self: center;
+}
+
+.form, .result {
+  margin: 10px;
+  padding: 12px;
+}
+
+:host {
+  display: flex;
+  justify-content: center;
+  padding-top: 5%;
+}
+
+
