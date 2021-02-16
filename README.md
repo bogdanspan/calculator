@@ -1,0 +1,34 @@
+Problema 1
+
+O mini-aplicatie Angular ce foloseste Redux (pentru a comunica intre componente)
+aplicatia va contine 2 componente:
+
+prima componenta va contine 2 inputuri si 4 butoane +, - * si /
+a doua componenta va contine doar un rezultat
+
+in momentul in care se apasa +,-,*/ si in inputuri exista 2 numere valide, in componenta 2 va afisa rezultatul. 
+daca unul din numere nu este valid, butoanele sunt disabled si se afiseaza un mesaj de eroare sub inputul cu numar invalid
+daca in inputul 2 se pune 0, atunci butonul de impartire este disabled 
+mesajele de eroare sunt rosii
+butoanele sunt stilizate
+
+Problema 2
+
+un spring boot app cu un singur endpoint:
+/api/operation/{op}/{num1}/{num2} 
+endpointul va return status-ul 200 + rezultatul ca si json daca parametrii sunt valizi 
+endpointul va returna statusul 400 + motivul erori (e.g divided by 0) 
+serviciul de calculare a operatiei va folosi Spring Cache 
+Operatia se va returna dintr-o tabela daca daca exista deja pentru ele doua numere. (should be h2) 
+
+Cerinta comuna -> o diagrama conceptuala a sistemului si o diagrama de clase a aplicatiei spring boot
+
+generat aplicatia spring boot cu https://start.spring.io/ 
+
+generat aplicatia angular : https://cli.angular.io/ 
+Poti folosi angular material: https://material.angular.io/ 
+pana marti la ora 12 (poti si seara daca e problema) sa-mi trimiti pe mail mariuscris9019@gmail.com, marius.oltean@nexttech.ro
+
+pune logs pe toti pasii pentru a vedea de unde se ia rezultatul -> din cache, din db sau se calculeaza si apoi se pune in DB din serviciu
+
+Librarii disponibile: ngrx(oficial), ngxs(mai usor de inteles) 
